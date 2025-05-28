@@ -15,6 +15,6 @@ namespace DatabaseTask.Core.Domain
         public Access Access { get; set; }
         public string Description { get; set; }
         public DateTime PositionCreatedDate { get; set; }
-        public DateTime PositionDisabledDate { get; set;
+        public DateTime? PositionDisabledDate { get; set;
     }
 }
