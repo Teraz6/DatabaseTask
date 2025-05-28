@@ -26,5 +26,7 @@ namespace DatabaseTask.Core.Domain
         public int TotalDays { get; set; }
         public int VacationDaysUsed { get; set; }
         public int VacationDaysRemaining { get; set; }
+
+        public ICollection<Employee> Employees { get; set; } 
     }
 }

@@ -15,5 +15,7 @@ namespace DatabaseTask.Core.Domain
         public required Employee Employee { get; set; }
         public required int Wage {  get; set; }
         public DateTime StartDate { get; set; }
+
+        public ICollection<Employee> Employees { get; set; }
     }
 }

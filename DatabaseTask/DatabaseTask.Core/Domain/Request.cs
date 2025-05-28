@@ -22,5 +22,8 @@ namespace DatabaseTask.Core.Domain
         public DateTime? ReviewedDate { get; set; }
         public string? Status { get; set; }
         public required string Description { get; set; }
+
+        public ICollection<Employee> Employees { get; set; }
+        public ICollection<WorkTopic> WorkTopics { get; set; }
     }
 }

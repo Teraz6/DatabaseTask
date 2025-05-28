@@ -16,9 +16,11 @@ namespace DatabaseTask.Core.Domain
 
         public int DeviceId { get; set; }
         [ForeignKey(nameof(DeviceId))]
-        public required Devices Devices { get; set; }
+        public required Devices Device { get; set; }
         
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+
+        public ICollection<Devices> Devices { get; set; }
     }
 }

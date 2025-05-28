@@ -18,5 +18,7 @@ namespace DatabaseTask.Core.Domain
         public DateTime StartTime { get; set; }
         public DateTime? EndTime { get; set; }
         public bool IsActive { get; set; }
+
+        public ICollection<Employee> Employees { get; set; }
     }
 }

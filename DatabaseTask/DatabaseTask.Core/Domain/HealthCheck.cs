@@ -18,5 +18,7 @@ namespace DatabaseTask.Core.Domain
         public DateTime LastCheckDate { get; set; }
         public DateTime NextCheckDate { get; set; }
         public bool IsHealthy { get; set; }
+
+        public ICollection<Employee> Employees { get; set; }
     }
 }

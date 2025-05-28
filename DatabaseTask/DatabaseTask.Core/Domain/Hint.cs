@@ -18,5 +18,8 @@ namespace DatabaseTask.Core.Domain
         public int? CreatorId { get; set; }
         [ForeignKey(nameof(CreatorId))]
         public Employee? Employee { get; set; }
+
+        public ICollection<Employee>? Employees { get; set; }
+        public ICollection<WorkTopic> WorkTopics { get; set; }
     }
 }

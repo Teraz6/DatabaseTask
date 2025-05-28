@@ -10,5 +10,8 @@ namespace DatabaseTask.Core.Domain
     {
         public int Id { get; set; }
         public required string Description { get; set; }
+
+        public ICollection<Hint> Hint { get; set; }
+        public ICollection<Request> Requests { get; set; }
     }
 }

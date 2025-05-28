@@ -24,5 +24,9 @@ namespace DatabaseTask.Core.Domain
         public int? JobHistoryId { get; set; }
         [ForeignKey(nameof(JobHistoryId))]
         public JobHistory? JobHistory { get; set; }
+
+        public ICollection<Address>? Addresses { get; set; }
+
+        public ICollection<JobHistory>? JobHistories { get; set; }
     }
 }

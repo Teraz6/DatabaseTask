@@ -22,5 +22,7 @@ namespace DatabaseTask.Core.Domain
         public required string City { get; set; }
         public required string County { get; set; }
         public required string Country { get; set; }
+
+        public ICollection<Employee>? Employees { get; set; }
     }
 }
