@@ -21,5 +21,8 @@ namespace DatabaseTask.Core.Domain
         [ForeignKey(nameof(AddressId))]
         public required Address Address { get; set; }
 
+        public int? JobHistoryId { get; set; }
+        [ForeignKey(nameof(JobHistoryId))]
+        public JobHistory? JobHistory { get; set; }
     }
 }
