@@ -11,6 +11,6 @@ namespace DatabaseTask.Core.Models
         public int Id { get; set; }
         public string Description { get; set; }
 
-        public ICollection<Position>? Addresses { get; set; }
+        public ICollection<Position>? Positions { get; set; }
     }
 }
