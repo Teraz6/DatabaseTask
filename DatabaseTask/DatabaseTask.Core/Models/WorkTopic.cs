@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class WorkTopic
+    public class WorkTopic
     {
         public int Id { get; set; }
         public required string Description { get; set; }

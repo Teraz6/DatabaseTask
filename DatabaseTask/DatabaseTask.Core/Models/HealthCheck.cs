@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class HealthCheck
+    public class HealthCheck
     {
         public int Id { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class Access
+    public class Access
     {
         public int Id { get; set; }
         public string Description { get; set; }

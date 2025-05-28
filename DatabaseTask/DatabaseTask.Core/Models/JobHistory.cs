@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class JobHistory
+    public class JobHistory
     {
         public int Id { get; set; }
 

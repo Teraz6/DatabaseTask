@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class Employee
+    public class Employee
     {
         [Key]
         public int Id { get; set; }

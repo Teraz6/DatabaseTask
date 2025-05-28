@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class SickLeave
+    public class SickLeave
     {
         public int Id { get; set; }
 

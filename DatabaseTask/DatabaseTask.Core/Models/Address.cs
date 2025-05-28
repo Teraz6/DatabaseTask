@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class Address
+    public class Address
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }

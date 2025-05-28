@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class Position
+    public class Position
     {
         public int Id { get; set; }
         public int AccessId { get; set; }

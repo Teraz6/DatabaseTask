@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseTask.Core.Models
 {
-    class Request
+    public class Request
     {
         public int Id { get; set; }
         public int WorkTopicId { get; set; }
