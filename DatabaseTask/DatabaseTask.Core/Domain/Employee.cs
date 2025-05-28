@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,5 +10,16 @@ namespace DatabaseTask.Core.Domain
 {
     class Employee
     {
+        [Key]
+        public int Id { get; set; }
+        public required string FirstName { get; set; }
+        public required string LastName { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public int PersonalCode { get; set; }
+        public int AddressId { get; set; }
+        [ForeignKey(nameof(AddressId))]
+        public Address Address { get; set; }
+
     }
 }
