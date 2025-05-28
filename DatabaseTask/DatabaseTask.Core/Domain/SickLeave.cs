@@ -13,7 +13,7 @@ namespace DatabaseTask.Core.Domain
 
         public int EmployeeId { get; set; }
         [ForeignKey(nameof(EmployeeId))]
-        public Employee Employee { get; set; }
+        public required Employee Employee { get; set; }
 
         public DateTime StartTime { get; set; }
         public DateTime? EndTime { get; set; }

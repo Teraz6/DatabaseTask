@@ -12,11 +12,11 @@ namespace DatabaseTask.Core.Domain
         public int Id { get; set; }
         public int EmployeeId { get; set; }
         [ForeignKey(nameof(EmployeeId))]
-        public Employee Employee { get; set; }
+        public Employee? Employee { get; set; }
 
         public int DeviceId { get; set; }
         [ForeignKey(nameof(DeviceId))]
-        public Devices Devices { get; set; }
+        public required Devices Devices { get; set; }
         
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

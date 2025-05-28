@@ -14,11 +14,11 @@ namespace DatabaseTask.Core.Domain
 
         public int PositionId { get; set; }
         [ForeignKey(nameof(PositionId))]
-        public Position Position { get; set; }
+        public required Position Position { get; set; }
 
         public int EmployeeId { get; set; }
         [ForeignKey(nameof(EmployeeId))]
-        public Employee Employee { get; set; }
+        public required Employee Employee { get; set; }
 
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }

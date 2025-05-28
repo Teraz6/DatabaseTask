@@ -12,15 +12,15 @@ namespace DatabaseTask.Core.Domain
         public int Id { get; set; }
         public int EmployeeId { get; set; }
         [ForeignKey(nameof(EmployeeId))]
-        public Employee Employee { get; set; }
+        public required Employee Employee { get; set; }
 
-        public string PostalCode { get; set; }
-        public int AppartmentNr { get; set; }
-        public int BuildingNr { get; set; }
-        public string Street { get; set; }
-        public string District { get; set; }
-        public string City { get; set; }
-        public string County { get; set; }
-        public string Country { get; set; }
+        public required string PostalCode { get; set; }
+        public required int AppartmentNr { get; set; }
+        public required int BuildingNr { get; set; }
+        public required string Street { get; set; }
+        public required string District { get; set; }
+        public required string City { get; set; }
+        public required string County { get; set; }
+        public required string Country { get; set; }
     }
 }

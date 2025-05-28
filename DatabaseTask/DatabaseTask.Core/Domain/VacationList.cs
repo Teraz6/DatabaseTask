@@ -13,14 +13,14 @@ namespace DatabaseTask.Core.Domain
         
         public int EmployeeId { get; set; }
         [ForeignKey(nameof(EmployeeId))]
-        public Employee Employee { get; set; }
+        public required Employee Employee { get; set; }
 
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         
         public int ApprovedBy { get; set; }
         [ForeignKey(nameof(ApprovedBy))]
-        public Employee Approver { get; set; }
+        public required Employee Approver { get; set; }
 
         public DateTime DateApproved { get; set; }
         public int TotalDays { get; set; }

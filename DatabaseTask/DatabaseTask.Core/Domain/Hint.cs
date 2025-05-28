@@ -13,7 +13,7 @@ namespace DatabaseTask.Core.Domain
 
         public int WorkTopicId { get; set; }
         [ForeignKey(nameof(WorkTopicId))]
-        public WorkTopic WorkTopic { get; set; }
+        public required WorkTopic WorkTopic { get; set; }
 
         public int? CreatorId { get; set; }
         [ForeignKey(nameof(CreatorId))]

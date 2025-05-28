@@ -14,12 +14,12 @@ namespace DatabaseTask.Core.Domain
         public int Id { get; set; }
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
+        public required string Phone { get; set; }
+        public required string Email { get; set; }
         public int PersonalCode { get; set; }
         public int AddressId { get; set; }
         [ForeignKey(nameof(AddressId))]
-        public Address Address { get; set; }
+        public required Address Address { get; set; }
 
     }
 }

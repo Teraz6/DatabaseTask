@@ -12,8 +12,8 @@ namespace DatabaseTask.Core.Domain
         public int Id { get; set; }
         public int EmployeeId { get; set; }
         [ForeignKey(nameof(EmployeeId))]
-        public Employee Employee { get; set; }
-        public int Wage {  get; set; }
+        public required Employee Employee { get; set; }
+        public required int Wage {  get; set; }
         public DateTime StartDate { get; set; }
     }
 }

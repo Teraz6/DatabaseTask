@@ -13,10 +13,10 @@ namespace DatabaseTask.Core.Domain
 
         public int ParentId { get; set; }
         [ForeignKey(nameof(ParentId))]
-        public Employee Parent { get; set; }
+        public required Employee Parent { get; set; }
 
         public DateTime BirthDate { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public required string FirstName { get; set; }
+        public required string LastName { get; set; }
     }
 }

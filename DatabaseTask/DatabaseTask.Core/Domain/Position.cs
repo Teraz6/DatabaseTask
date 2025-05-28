@@ -12,8 +12,8 @@ namespace DatabaseTask.Core.Domain
         public int Id { get; set; }
         public int AccessId { get; set; }
         [ForeignKey(nameof(AccessId))]
-        public Access Access { get; set; }
-        public string Description { get; set; }
+        public required Access Access { get; set; }
+        public string? Description { get; set; }
         public DateTime PositionCreatedDate { get; set; }
         public DateTime? PositionDisabledDate { get; set;
     }
