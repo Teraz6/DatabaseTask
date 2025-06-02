@@ -1,0 +1,33 @@
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-localdb
+    user: root
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=LocalDB@123
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    restart: unless-stopped
+
+  mssql-init:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    depends_on:
+      - mssql
+    environment:
+      - ACCEPT_EULA=Y
+    command: >
+      bash -c '
+      sleep 15;
+      /opt/mssql-tools/bin/sqlcmd -S mssql -U sa -P LocalDB@123 -Q "CREATE DATABASE [DatabaseTask]";
+      /opt/mssql-tools/bin/sqlcmd -S mssql -U sa -P LocalDB@123 -Q "CREATE LOGIN [root] WITH PASSWORD = N'\''root'\''";
+      /opt/mssql-tools/bin/sqlcmd -S mssql -U sa -P LocalDB@123 -d DatabaseTask -Q "CREATE USER [root] FOR LOGIN [root]";
+      /opt/mssql-tools/bin/sqlcmd -S mssql -U sa -P LocalDB@123 -d DatabaseTask -Q "ALTER ROLE db_owner ADD MEMBER [root]";
+      echo "DatabaseTask created and root user configured successfully";
+      '
+
+volumes:
+  mssql_data:
